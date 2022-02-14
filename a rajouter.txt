@@ -1,0 +1,6 @@
+- un back avec une base mongoDB
+- un formulaire d'ajout 
+- une recherche 
+- trier par appréciation
+- mettre un dark mode 
+- CRUD 
