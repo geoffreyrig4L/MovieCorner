@@ -2,7 +2,6 @@ import { films } from "../datas/Datas.js";
 import FilmItem from "./FilmItem.js";
 import Sorter from "./Sorter.js";
 import { useState } from "react";
-import AddForm from "./AddForm.js";
 
 function FilmList() {
   const [activeFilter, setActiveFilter] = useState("date_visionnage");
@@ -93,8 +92,6 @@ function FilmList() {
           <th className="font-bold w-56">Nationalité</th>
         </thead>
         <tbody>
-          <AddForm />
-
           {filmsSorted.map(
             ({
               id,

@@ -13,17 +13,17 @@ function Sorter({ activeFilter, setActiveFilter, activeSens, setActiveSens }) {
   return (
     <div>
       <select
-        className="w-[250px] text-xl mb-10 py-2 px-2 text-center border-b-4 border-grey-200 focus:outline-none"
+        className="w-[250px] mb-10 py-2 px-2 text-center bg-gray-100 focus:outline-none"
         value={activeFilter}
         onChange={(e) => setActiveFilter(e.target.value)}
       >
-        <option value="date_visionnage" className="">
+        <option value="date_visionnage" className="text-sm">
           Date de visionnage
         </option>
-        <option value="date_sortie" className="">
+        <option value="date_sortie" className="text-sm">
           Date de sortie
         </option>
-        <option value="titre" className="">
+        <option value="titre" className="text-sm">
           Titre
         </option>
       </select>
