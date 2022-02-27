@@ -13,7 +13,7 @@ function Sorter({ activeFilter, setActiveFilter, activeSens, setActiveSens }) {
   return (
     <div>
       <select
-        className="w-[250px] mb-10 py-2 px-2 text-center bg-gray-100 focus:outline-none"
+        className="w-[250px] mb-10 p-2 text-center bg-gray-100 focus:outline-none"
         value={activeFilter}
         onChange={(e) => setActiveFilter(e.target.value)}
       >

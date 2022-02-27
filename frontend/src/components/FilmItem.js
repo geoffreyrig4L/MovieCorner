@@ -1,16 +1,23 @@
-function FilmItem(
-  { id, titre, date_visionnage, date_sortie, appreciation, nationalite },
-  cpt
-) {
-  return (
-    <tr key={id} className={cpt % 2 === 0 ? "bg-gray-100" : "bg-white"}>
-      <td className="py-2  font-normal">{titre}</td>
-      <td className="py-2 ">{appreciation}</td>
-      <td className="py-2  font-light">{date_visionnage}</td>
-      <td className="py-2  font-light">{date_sortie}</td>
-      <td className="py-2  font-light">{nationalite}</td>
-    </tr>
-  );
+const axios = require("axios").default;
+
+function FilmItem({
+  id,
+  titre,
+  date_visionnage,
+  date_sortie,
+  appreciation,
+  nationalite,
+}) {
+  return axios
+    .get("http/localhost:3091/api/film")
+    .then(function (res) {
+      if (res.ok) {
+        return res.json();
+      }
+    })
+    .catch(function (error) {
+      return error;
+    });
 }
 
 export default FilmItem;
